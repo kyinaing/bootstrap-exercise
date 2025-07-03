@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Bootstrap Sandbox | Accordion & Collapse</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5">Accordion & Collapse</h1>
+      <!-- Collapse and Collapse All -->
+      <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Bootstrap Accordion</h2>
+            <button class="btn btn-primary" id="toggleAll">Expand All</button>
+        </div>
+        
+        <div class="accordion" id="myaccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne">
+                    Accordion 1
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" 
+                id="collapseOne" data-bs-parent="#myaccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo">
+                    Accordion 2
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" 
+                id="collapseTwo" data-bs-parent="#myaccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree">
+                    Accordion 3
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" 
+                id="collapseThree" data-bs-parent="#myaccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <br><br>
+      <!-- Accordion -->
+      <div class="accordion" id="myaccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne">
+            Accordion 1
+          </button>
+          </h2>
+          <div class="accordion-collapse collapse show" 
+          id="collapseOne" data-bs-parent="#myaccordion">
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+          </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo">
+            Accordion 2
+          </button>
+          </h2>
+          <div class="accordion-collapse collapse" 
+          id="collapseTwo" data-bs-parent="#myaccordion">
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+          </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree">
+            Accordion 3
+          </button>
+          </h2>
+          <div class="accordion-collapse collapse" 
+          id="collapseThree" data-bs-parent="#myaccordion">
+          <div class="accordion-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque reprehenderit dicta itaque, suscipit quod quos? Doloremque, nobis numquam rem assumenda dolore aspernatur enim eligendi. Ipsum nulla totam sapiente nisi eum.
+          </div>
+          </div>
+        </div>
+      </div>
+
+        
+
+      <br /><br />
+
+      <!-- Collapse -->
+
+      <div class="my-3">
+        <button class="btn btn-primary"
+        data-bs-toggle="collapse"
+        data-bs-target="#mycontent">
+        Toggle Content
+        </button>
+      </div>
+      <div class="collapse" id="mycontent">
+        <div class="card">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aliquam culpa neque quae, deleniti aliquid explicabo commodi inventore itaque praesentium. Vero accusamus deserunt cupiditate omnis rerum quis sed optio quibusdam?
+          </div>
+        </div>
+      </div>
+
+      <!-- Don't go past here -->
+    </div>
+    <div style="margin-top: 350px"></div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleAll');
+            const accordion = document.getElementById('myaccordion');
+            const collapseElements = accordion.querySelectorAll('.accordion-collapse');
+            const buttonElements = accordion.querySelectorAll('.accordion-button');
+            
+            let allExpanded = false;
+            
+            // Check initial state - if any item is expanded, consider it as not all collapsed
+            collapseElements.forEach(element => {
+                if (element.classList.contains('show')) {
+                    allExpanded = true;
+                }
+            });
+            
+            // Update button text based on initial state
+            updateButtonText();
+            
+            toggleBtn.addEventListener('click', function() {
+                if (allExpanded) {
+                    // Collapse all - restore parent behavior
+                    collapseElements.forEach((element, index) => {
+                        element.setAttribute('data-bs-parent', '#myaccordion');
+                        const bsCollapse = new bootstrap.Collapse(element, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                        buttonElements[index].classList.add('collapsed');
+                    });
+                    allExpanded = false;
+                } else {
+                    // Expand all - remove parent behavior temporarily
+                    collapseElements.forEach((element, index) => {
+                        element.removeAttribute('data-bs-parent');
+                        const bsCollapse = new bootstrap.Collapse(element, {
+                            toggle: false
+                        });
+                        bsCollapse.show();
+                        buttonElements[index].classList.remove('collapsed');
+                    });
+                    allExpanded = true;
+                }
+                updateButtonText();
+            });
+            
+            // Listen for individual accordion changes to update button state
+            collapseElements.forEach(element => {
+                element.addEventListener('shown.bs.collapse', updateState);
+                element.addEventListener('hidden.bs.collapse', updateState);
+            });
+            
+            function updateState() {
+                const expandedCount = accordion.querySelectorAll('.accordion-collapse.show').length;
+                allExpanded = expandedCount === collapseElements.length;
+                
+                // If not all expanded, restore parent behavior to maintain accordion functionality
+                if (!allExpanded) {
+                    collapseElements.forEach(element => {
+                        element.setAttribute('data-bs-parent', '#myaccordion');
+                    });
+                }
+                
+                updateButtonText();
+            }
+            
+            function updateButtonText() {
+                toggleBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+            }
+        });
+    </script>
+  </body>
+</html>
