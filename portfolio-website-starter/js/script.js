@@ -1,6 +1,6 @@
 // Add custom JavaScript here
 function runTypingEffect() {
-    const text = 'I am KYI NAING HTET';
+    const text = 'I am Kyi Naing Htet';
     const typingElement = document.getElementById('typing-text');
     const typingDelay = 130;
 
